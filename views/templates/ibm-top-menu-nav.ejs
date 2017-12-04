@@ -1,0 +1,44 @@
+<!-- views/partials/header.ejs -->
+<!-- <header> -->
+    
+    <nav >
+        <!-- <img src="../../public/img/IBM_logo.svg" alt="logo" class="logo"> -->
+        <!-- <div class="logo"><a ng-click="goHome()" class="logo">IBM <span>Elastic</span></a></div> -->
+        <!-- <div class="logo">
+                <label class="brand" ng-click="goHome()" role="button" tabindex="0">IBM <span>Elastic</span>
+        </div> -->
+        <!-- left menu --> 
+        <div class="sidebar-toggle-box">
+                <i class="fa fa-bars"></i>
+        </div>
+        <a href="index.html" class="logo">IBM<span>Elastic</span></a>          
+
+        <div id="ibm-top-menu-bar" ng-controller="ibmTopMenuBar">
+                <ul>
+                    <li ng-repeat="topbar in topbarmenu">
+                        <a href={{topbar.path}} ><span>{{topbar.name}}</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        <!-- right menu --> 
+        <div class="top-nav ">
+            <ul class="nav pull-right top-menu">
+                <li>
+                    <input type="text" class="form-control search" placeholder="Search">
+                </li>
+            </ul>
+            <!--search & user info end-->
+
+        
+        </div>                
+     
+
+        
+        
+    </nav>
+
+    <!-- ngIf: !anonymous -->
+    
+    <!-- end ngIf: !anonymous -->
+<!-- </header> -->

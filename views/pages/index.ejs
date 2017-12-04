@@ -1,26 +1,34 @@
 <!-- views/pages/index.ejs -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ibmElasticDashboard">
 <head>
     <% include ../templates/head %> 
 </head>
-<body class="container">
+    <body ng-controller="ibmElasticController" translate="no" style>
+        <section id="container" class>
+            <header class="header white-bg box-shadow">
+                <div>
+                    <% include ../templates/ibm-top-menu-nav %>
+                </div>
+            </header>
 
-<header>
-    <% include ../templates/header %>
-</header>
-
-<main>
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>
-</main>
-
-
-<footer>
-    <% include ../templates/footer %>
-</footer>
-
-</body>
+            <div ng-controller="ibm-left-sidebar">
+                    <% include ../templates/elksidebar-menu %>
+            </div>
+            <div ui-view></div>
+        </section>
+        <script>
+            $('.wix-topbar-selector').click(function(){
+                if($(this).find('.show-wix-topbar-select-menu').length){
+                $(this).find('.show-wix-topbar-select-menu').removeClass('show-wix-topbar-select-menu');
+            }
+            else{
+                $(this).find('.wix-topbar-select-menu').addClass('show-wix-topbar-select-menu');
+            }
+         })
+        </script>
+        <% include ../templates/scripts %>
+        <% include ../templates/footer %>
+    </body>
 </html>
 

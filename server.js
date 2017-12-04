@@ -1,5 +1,5 @@
 'use strict';
-// loading modoules 
+// loading modoules
 var express = require('express');
 var http = require('http');
 var bodyparser = require('body-parser');
@@ -11,17 +11,15 @@ var port = process.env.PORT || 3000;
 
 var app = express();
 
-// Configration 
+// Configration
 // view engine app
-//app.set('/views', path.join(__dirname, '/views'));
-//app.set('views',__dirname+ '/views');
-//app.set('public',__dirname+ '/public');
 app.use(express.static(path.join(__dirname, 'views')));
 app.use(express.static(path.join(__dirname, 'public')));
-//app.use(express.static __dirname + '/public');
-//app.use(express.static('views'));
 app.set('view engine', 'ejs');
 
 routes(app);
 
-app.listen(port,'0.0.0.0');
+app.listen(port,'0.0.0.0', function() {
+    console.log('Server listening on port ' + port + '...');
+});
+

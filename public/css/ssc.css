@@ -1,49 +1,58 @@
-body {
-    background-color: #CCC;
-    margin:80px 80px 100px 100px;
+/* Style for our header texts
+* --------------------------------------- */
+/*
+h1{
+    font-size: 5em;
+    font-family: arial,helvetica;
+    color: #fff;
+    margin:0;
+    padding:0;
 }
-div#fixedheader {
-    position:fixed;
-    top:0px;
-    left:0px;
-    width:100%;
-    color:#CCC;
-    background:#333;
-    padding:20px;
+.intro p{
+    color: #fff;
 }
-div#fixedfooter {
+*/
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+    text-align:center;
+}
+/* Fixed header and footer.
+* --------------------------------------- */
+#header{
     position:fixed;
+    height: 50px;
+    display:block;
+    width: 100%;
+    background: #333;
+    z-index:1;
+    text-align:center;
+    color: #f2f2f2;
+    padding: 27px 0 0 0;
+}
+.footer {
+    position:fixed;
+    height: 30px;
+    display:block;
+    width: 100%;
+    background: #333;
+    z-index:1;
+    text-align:center;
+    color: #f2f2f2;
+    padding: 27px 0 0 0;
     bottom:0px;
-    left:0px;
-    width:100%;
-    color:#CCC;
-    background:#333;
-    padding:8px;
+
+}
+#header{
+   top:0px;
+}
+.headerLogo {
+    
 }
 
-div#ibmLogo{
-    float: left;
-    width: 100px;
-    height: 100px;
-    background: #555;
-}
-body {
-    background-color: #F2F2F0;
-}
+/* My define */
 
-.navbar {
-    background-color: #373737;
-    padding: 5px;
+#dashboard {
+  height: 100%;
 }
-.navbar a {
-    color: #8C8C8C;
-    font-size: 1.5em;
-}
-
-.coligo {
-    color: #D0D0D0;
-    font-size: 0.8em;
-}
-
-
 
